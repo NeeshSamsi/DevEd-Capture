@@ -13,11 +13,12 @@ import { pageAnimation } from "../animation";
 
 const OurWork = () => {
   return (
-    <Stlwork
+    <StlWork
       variants={pageAnimation}
       initial="hidden"
       animate="show"
       exit="exit"
+      style={{ background: "#fff" }}
     >
       <StlMovie>
         <h2>The Athlete</h2>
@@ -40,12 +41,12 @@ const OurWork = () => {
           <img src={goodtimes} alt="Good Times" />
         </Link>
       </StlMovie>
-    </Stlwork>
+    </StlWork>
   );
 };
 
 // Styled Componenets
-const Stlwork = styled(motion.div)`
+const StlWork = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
@@ -55,6 +56,7 @@ const Stlwork = styled(motion.div)`
 
     .line {
       height: 0.5rem;
+      width: 100%;
       background: #ccc;
       margin-bottom: 3rem;
     }

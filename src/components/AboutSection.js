@@ -6,6 +6,7 @@ import { StlAbout, StlDescription, StlImage, StlHide } from "../styles";
 
 // Import Framer Motion
 import { motion } from "framer-motion";
+import { titleAnimation, photoAnimation, fade } from "../animation";
 
 const AboutSection = () => {
   return (
@@ -13,25 +14,29 @@ const AboutSection = () => {
       <StlDescription>
         <motion.div>
           <StlHide>
-            <motion.h2>We work to make</motion.h2>
+            <motion.h2 variants={titleAnimation}>We work to make</motion.h2>
           </StlHide>
           <StlHide>
-            <motion.h2>
+            <motion.h2 variants={titleAnimation}>
               your <span>dreams</span>
             </motion.h2>
           </StlHide>
           <StlHide>
-            <motion.h2>come true.</motion.h2>
+            <motion.h2 variants={titleAnimation}>come true.</motion.h2>
           </StlHide>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           Contact us for an photography or videography ideas that you have. We
           have professionals with amazing skills.
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact Us</motion.button>
       </StlDescription>
       <StlImage>
-        <img src={home1} alt="Guy with a camera" />
+        <motion.img
+          src={home1}
+          alt="Guy with a camera"
+          variants={photoAnimation}
+        />
       </StlImage>
     </StlAbout>
   );
