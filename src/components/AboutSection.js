@@ -1,5 +1,6 @@
 import React from "react";
 import home1 from "../img/home1.png";
+import Wave from "./Wave";
 
 // Import Styled Components
 import { StlAbout, StlDescription, StlImage, StlHide } from "../styles";
@@ -38,6 +39,7 @@ const AboutSection = () => {
           variants={photoAnimation}
         />
       </StlImage>
+      <Wave />
     </StlAbout>
   );
 };

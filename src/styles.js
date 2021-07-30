@@ -14,6 +14,7 @@ export const StlAbout = styled.div`
 export const StlDescription = styled.div`
   flex: 1;
   padding-right: 5rem;
+  z-index: 2;
   h2 {
     font-weight: 400;
   }
@@ -22,6 +23,7 @@ export const StlDescription = styled.div`
 export const StlImage = styled.div`
   flex: 1;
   overflow: hidden;
+  z-index: 2;
   img {
     width: 100%;
     height: 80vh;
