@@ -11,7 +11,7 @@ import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
 
 // Import Styles
-import { StlAbout, StlDescription, StlImage, StlHide } from "../styles";
+import { StlAbout, StlDescription, StlImage } from "../styles";
 
 const ServicesSection = () => {
   return (
