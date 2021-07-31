@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Toggle from "./Toggle";
 
+// Motion
+import { AnimateSharedLayout } from "framer-motion";
+
 // Import Styled Components
 import { StlAbout } from "../styles";
 
@@ -12,9 +15,8 @@ const FaqSection = () => {
         Any Questions <span>FAQ</span>
       </h2>
 
-      <Toggle>
-        <div className="question">
-          <h4>How do I start?</h4>
+      <AnimateSharedLayout>
+        <Toggle title="How Do I Start?">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
@@ -22,42 +24,35 @@ const FaqSection = () => {
               quod?
             </p>
           </div>
-          <div className="faq-line"></div>
-        </div>
-      </Toggle>
-      <div className="question">
-        <h4>What is your Daily Schedule?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,
-            quod?
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Which payment methods do you support?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,
-            quod?
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>What products do you offer?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,
-            quod?
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+        </Toggle>
+        <Toggle title="What is your Daily Schedule?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,
+              quod?
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Which payment methods do you support?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,
+              quod?
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="What products do you offer?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,
+              quod?
+            </p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </StlFaq>
   );
 };
