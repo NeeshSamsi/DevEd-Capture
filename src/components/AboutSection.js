@@ -1,6 +1,7 @@
 import React from "react";
 import home1 from "../img/home1.png";
 import Wave from "./Wave";
+import { Link } from "react-router-dom";
 
 // Import Styled Components
 import { StlAbout, StlDescription, StlImage, StlHide } from "../styles";
@@ -30,7 +31,9 @@ const AboutSection = () => {
           Contact us for an photography or videography ideas that you have. We
           have professionals with amazing skills.
         </motion.p>
-        <motion.button variants={fade}>Contact Us</motion.button>
+        <Link to="/contact">
+          <motion.button variants={fade}>Contact Us</motion.button>
+        </Link>
       </StlDescription>
       <StlImage>
         <motion.img
