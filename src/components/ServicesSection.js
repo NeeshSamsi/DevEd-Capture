@@ -13,9 +13,20 @@ import teamwork from "../img/teamwork.svg";
 // Import Styles
 import { StlAbout, StlDescription, StlImage } from "../styles";
 
+// Import Animation Packages
+import { useScroll } from "./useScroll";
+import { scrollReveal } from "../animation";
+
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
+
   return (
-    <StlServices>
+    <StlServices
+      variants={scrollReveal}
+      animate={controls}
+      ref={element}
+      initial="hidden"
+    >
       <StlDescription>
         <h2>
           High <span>quality</span> services
