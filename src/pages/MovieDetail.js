@@ -7,6 +7,8 @@ import { MovieState } from "../movieState";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 
+import ScrollTop from "../components/ScrollTop";
+
 const MovieDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
@@ -47,6 +49,7 @@ const MovieDetail = () => {
           </StlImageDisplay>
         </StlDetails>
       )}
+      <ScrollTop />
     </>
   );
 };

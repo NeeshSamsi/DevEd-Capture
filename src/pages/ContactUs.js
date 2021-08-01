@@ -8,6 +8,8 @@ import { titleAnimation } from "../animation";
 // Import Styled
 import styled from "styled-components";
 
+import ScrollTop from "../components/ScrollTop";
+
 const ContactUs = () => {
   return (
     <StlContact
@@ -42,6 +44,7 @@ const ContactUs = () => {
           </StlSocial>
         </StlHide>
       </div>
+      <ScrollTop />
     </StlContact>
   );
 };
